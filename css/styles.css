@@ -390,6 +390,7 @@ footer {
   flex-direction: row;
   align-items: baseline;
   padding: 100px 0;
+  gap: 50px;
 }
 .footer-logo-desc {
   margin-right: 120px;
@@ -401,7 +402,8 @@ footer {
 .footer-wrapper {
   display: block;
 }
-.footer-caption {
+.footer-caption,
+.footer-subscribe {
   font-weight: 500;
   color: rgba(var(--white-cl));
   margin-bottom: 16px;
