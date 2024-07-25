@@ -19,7 +19,7 @@
   --col-indent: 24px;
   --row-indent: var(--col-indent);
 
-  --anim-slow: 600ms ease-in-out;
+  /* --anim-slow: 600ms ease-in-out; */
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -505,8 +505,8 @@ footer {
   opacity: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: var(--anim-fast);
-  transition-property: transform, opacity;
+  transition: transform var(--anim-fast);
+  /* transition-property: transform, opacity; */
   transition-delay: 0s;
 }
 .backdrop.is-open .modal {
@@ -554,7 +554,7 @@ footer {
   color: rgba(var(--navy-blue-cl));
 }
 .modal-form-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .modal-form-label {
   display: block;
@@ -603,7 +603,7 @@ footer {
   margin-bottom: 16px;
   width: 100%;
   height: 120px;
-  padding: 8px px;
+  padding: 8px 16px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -626,9 +626,9 @@ footer {
   margin-bottom: 24px;
 }
 .modal-form-desc {
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   font-size: 12px;
-  line-height: 1.02em;
+  line-height: 1.17em;
   color: rgba(var(--light-slate-cl));
 }
 .modal-form-checkbox {
@@ -639,22 +639,39 @@ footer {
   height: 16px;
   margin-right: 12px;
   border-radius: 2px;
+  fill: transparent;
   border: 1px solid rgba(var(--navy-blue-modal-cl));
   transition: var(--anim-fast);
-  transition-property: border-color, background-color;
+  transition-property: background-color, border, fill;
 }
 
 input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
-  border-color: rgba(var(--ocean-cl));
+  border: none;
   background-color: rgba(var(--ocean-cl));
+  fill: rgba(var(--coud-cl));
 }
 input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
   box-shadow: 0 0 0 3px rgba(var(--ocean-cl));
 }
 .modal-form-checkbox-icon {
+  /* fill: transparent; */
 }
 .modal-form-link {
   font-size: 12px;
   line-height: 1.04em;
   color: rgba(var(--iris-cl));
+}
+
+.modal-form-btn-submit {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgba(var(--white-cl));
+  background-color: rgba(var(--iris-cl));
+  border: none;
+  transition: var(--anim-fast);
+  transition-property: background-color;
 }

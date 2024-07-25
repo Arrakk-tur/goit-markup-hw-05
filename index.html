@@ -619,7 +619,7 @@
     </footer>
 
     <!-- region Modal -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-icon" width="8" height="8">
@@ -685,14 +685,14 @@
             ></textarea>
           </div>
           <div class="modal-form-agreement">
-            <input
-              class="visually-hidden"
-              type="checkbox"
-              name="user-privacy"
-              id="user-privacy"
-              value="true"
-            />
             <label class="modal-form-desc" for="user-privacy">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="user-privacy"
+                id="user-privacy"
+                value="true"
+              />
               <span class="modal-form-checkbox">
                 <svg class="modal-form-checkbox-icon" width="10" height="10">
                   <use href="./images/icons.svg#Checkbox"></use>
@@ -702,7 +702,7 @@
               <a class="modal-form-link" href="">Privacy Policy</a>
             </label>
           </div>
-          <button class="btn btn-accent" type="submit">Send</button>
+          <button class="btn modal-form-btn-submit" type="submit">Send</button>
         </form>
       </div>
     </div>
