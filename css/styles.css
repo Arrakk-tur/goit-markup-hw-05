@@ -19,7 +19,6 @@
   --col-indent: 24px;
   --row-indent: var(--col-indent);
 
-  /* --anim-slow: 600ms ease-in-out; */
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -505,8 +504,8 @@ footer {
   opacity: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform var(--anim-fast);
-  /* transition-property: transform, opacity; */
+  transition: var(--anim-fast);
+  transition-property: transform;
   transition-delay: 0s;
 }
 .backdrop.is-open .modal {
@@ -554,7 +553,7 @@ footer {
   color: rgba(var(--navy-blue-cl));
 }
 .modal-form-field {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .modal-form-label {
   display: block;
