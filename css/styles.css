@@ -501,8 +501,9 @@ footer {
   opacity: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: var(--anim-fast);
-  transition-property: transform, opacity;
+  /* transition: var(--anim-fast); */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: transform, opacity; */
 }
 .backdrop.is-open .modal {
   transform: translate(-50%, -50%);
@@ -524,18 +525,19 @@ footer {
   transition: var(--anim-fast);
   transition-property: background-color, border;
 }
+.modal-close-icon {
+  transition: fill var(--anim-fast);
+}
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: rgba(var(--ocean-cl));
+  /* background-color: rgba(var(--ocean-cl)); */
+  background-color: #404bbf;
   border: none;
-}
-.modal-close-icon {
-  transition: var(--anim-fast);
-  transition-property: fill;
 }
 .modal-close-icon:hover,
 .modal-close-icon:focus {
-  fill: rgba(var(--white-cl));
+  /* fill: rgba(var(--white-cl)); */
+  fill: #ffffff;
 }
 .modal-caption {
   max-width: 298px;
@@ -639,13 +641,13 @@ footer {
   transition: var(--anim-fast);
   transition-property: background-color, border, fill;
 }
-.modal-agreemrnt-checkbox:checked + .modal-form-desc > .modal-form-checkbox {
-  border: none;
-  background-color: rgba(var(--ocean-cl));
-  fill: rgba(var(--coud-cl));
-}
-input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
+/* input[type="checkbox"]:focus + .modal-form-desc > .modal-form-checkbox {
   box-shadow: 0 0 0 3px rgba(var(--ocean-cl));
+} */
+.modal-agreement-checkbox:checked + .modal-form-desc > span {
+  background-color: rgba(var(--ocean-cl));
+  border: none;
+  fill: rgba(var(--coud-cl));
 }
 .modal-form-link {
   font-size: 12px;
