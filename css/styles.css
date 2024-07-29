@@ -504,9 +504,8 @@ footer {
   transition: transform var(--anim-fast), opacity var(--anim-fast);
 }
 .backdrop.is-open .modal {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   opacity: 1;
-  transition-delay: 400ms;
 }
 .modal-close-btn {
   position: absolute;
@@ -528,11 +527,15 @@ footer {
   transition: var(--anim-fast);
   transition-property: fill;
 }
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  border: none;
+.modal-close-btn:hover {
   background-color: rgba(var(--ocean-cl));
+  border: none;
 }
+.modal-close-btn:focus {
+  background-color: rgba(var(--ocean-cl));
+  border: none;
+}
+
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: rgba(var(--white-cl));
@@ -667,4 +670,5 @@ input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
   transition: var(--anim-fast);
   transition-property: background-color;
 }
+
 /* #endregion */
