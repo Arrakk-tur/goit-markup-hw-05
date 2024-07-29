@@ -534,7 +534,10 @@ footer {
   background-color: #404bbf;
   border: none;
 }
-.modal-close-icon:hover,
+.modal-close-icon:hover {
+  /* fill: rgba(var(--white-cl)); */
+  fill: #ffffff;
+}
 .modal-close-icon:focus {
   /* fill: rgba(var(--white-cl)); */
   fill: #ffffff;
@@ -614,7 +617,7 @@ footer {
   transition-property: border-color;
 }
 .modal-form-comment:focus {
-  border-color: rgba(var(--iris-cl));
+  border-color: #4d5ae5;
 }
 .modal-form-comment::placeholder {
   color: rgba(var(--navy-blue-modal-cl));
@@ -645,9 +648,9 @@ footer {
   box-shadow: 0 0 0 3px rgba(var(--ocean-cl));
 } */
 .modal-agreement-checkbox:checked + .modal-form-desc > span {
-  background-color: rgba(var(--ocean-cl));
+  background-color: #404bbf;
   border: none;
-  fill: rgba(var(--coud-cl));
+  fill: #f4f4fd;
 }
 .modal-form-link {
   font-size: 12px;
