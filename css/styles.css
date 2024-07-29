@@ -501,7 +501,8 @@ footer {
   opacity: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform var(--anim-fast), opacity var(--anim-fast);
+  transition: var(--anim-fast);
+  transition-property: transform, opacity;
 }
 .backdrop.is-open .modal {
   transform: translate(-50%, -50%);
@@ -578,7 +579,8 @@ footer {
   transition-property: border-color;
 }
 .modal-form-input:focus {
-  border-color: rgba(var(--iris-cl));
+  /* border-color: rgba(var(--iris-cl)); */
+  border-color: #4d5ae5;
 }
 .modal-form-icon {
   position: absolute;
@@ -644,13 +646,10 @@ footer {
 .modal-agreemrnt-checkbox:checked + .modal-form-desc > .modal-form-checkbox {
   border: none;
   background-color: rgba(var(--ocean-cl));
-  fill: rgba(var(--cloud-cl));
+  fill: rgba(var(--coud-cl));
 }
 input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
   box-shadow: 0 0 0 3px rgba(var(--ocean-cl));
-}
-.modal-form-checkbox-icon {
-  fill: transparent;
 }
 .modal-form-link {
   font-size: 12px;
