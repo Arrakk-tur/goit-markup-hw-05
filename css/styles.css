@@ -539,13 +539,13 @@ footer {
   background-color: #404bbf;
   border: none;
 }
-.modal-close-icon:hover {
+.modal-close-btn:hover + .modal-close-icon {
   /* fill: rgba(var(--white-cl)); */
-  fill: #ffffff;
+  fill: rgba(var(--white-cl));
 }
-.modal-close-icon:focus {
+.modal-close-btn:focus + .modal-close-icon {
   /* fill: rgba(var(--white-cl)); */
-  fill: #ffffff;
+  fill: rgba(var(--white-cl));
 }
 .modal-caption {
   max-width: 298px;
