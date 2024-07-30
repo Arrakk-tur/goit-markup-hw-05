@@ -526,6 +526,7 @@ footer {
   transition-property: background-color, border;
 }
 .modal-close-icon {
+  fill: rgba(var(--navy-blue-cl));
   transition: fill var(--anim-fast);
 }
 .modal-close-btn:hover {
@@ -656,8 +657,9 @@ footer {
 }
 /* input[type="checkbox"]:focus + .modal-form-desc > .modal-form-checkbox {
   box-shadow: 0 0 0 3px rgba(var(--ocean-cl));
+  + .modal-form-desc > span 
 } */
-input[type="checkbox"]:checked + .modal-form-desc > span {
+input[type="checkbox"]:checked {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
