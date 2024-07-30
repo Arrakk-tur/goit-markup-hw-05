@@ -597,7 +597,7 @@ footer {
 }
 .modal-form-input:focus {
   /* border-color: rgba(var(--iris-cl)); */
-  border: 1px solid rgba(var(--iris-cl));
+  border-color: rgba(var(--iris-cl));
 }
 .modal-form-input:focus + .modal-form-icon {
   fill: rgba(var(--iris-cl));
