@@ -522,12 +522,8 @@ footer {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(var(--cornflower-cl));
-  transition: var(--anim-fast);
-  transition-property: background-color, border;
-}
-.modal-close-icon {
-  fill: rgba(var(--navy-blue-cl));
-  transition: fill var(--anim-fast);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
@@ -535,6 +531,10 @@ footer {
   background-color: #404bbf;
   fill: #ffffff;
   border: none;
+}
+.modal-close-icon {
+  fill: rgba(var(--navy-blue-cl));
+  transition: fill var(--anim-fast);
 }
 /* .modal-close-btn:focus {
   background-color: rgba(var(--ocean-cl));
@@ -625,7 +625,7 @@ footer {
   border-color: rgba(var(--navy-blue-modal-cl));
   outline: transparent;
   resize: none;
-  transition: var(--anim-fast);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border-color;
 }
 .modal-form-comment::placeholder {
@@ -649,18 +649,20 @@ footer {
   justify-content: center;
   width: 16px;
   height: 16px;
-  margin-right: 12px;
+  margin-right: 8px;
   border-radius: 2px;
   fill: transparent;
+  cursor: pointer;
   border: 1px solid rgba(var(--navy-blue-modal-cl));
   background-color: transparent;
-  transition: var(--anim-fast);
-  transition-property: background-color, border, fill;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
   background-color: #404bbf;
   border: none;
-  fill: #f4f4fd; /* + .modal-form-desc > span  */
+  fill: #f4f4fd;
 }
 /* input[type="checkbox"]:checked {
   background-color: #404bbf;
@@ -684,6 +686,11 @@ input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
   border: none;
   transition: var(--anim-fast);
   transition-property: background-color;
+}
+.modal-form-btn-submit:hover,
+.modal-form-btn-submit:focus {
+  background-color: #404bbf;
+  outline: none;
 }
 
 /* #endregion */
