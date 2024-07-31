@@ -540,15 +540,13 @@ footer {
   background-color: rgba(var(--ocean-cl));
   background-color: #404bbf;
   border: none;
-}
+} */
 .modal-close-icon:hover {
-  fill: rgba(var(--white-cl));
   fill: #ffffff;
 }
 .modal-close-icon:focus {
-  fill: rgba(var(--white-cl));
   fill: #ffffff;
-} */
+}
 .modal-caption {
   max-width: 298px;
   margin-bottom: 16px;
