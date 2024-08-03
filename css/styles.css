@@ -7,6 +7,7 @@
   --iris-cl: 77, 90, 229, 1;
   --coud-cl: 244, 244, 253, 1;
   --ocean-cl: 64, 75, 191, 1;
+  --accent-cl: 64, 75, 191, 1;
   --white-cl: 255, 255, 255, 1;
   --cornflower-cl: 231, 233, 252, 1;
   --light-slate-cl: 142, 143, 153, 1;
@@ -528,9 +529,9 @@ footer {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   /* background-color: rgba(var(--ocean-cl)); */
-  background-color: #404bbf;
-  fill: #ffffff;
+  background-color: rgba(var(--accent-cl));
   border: none;
+  fill: rgba(var(--white-cl));
 }
 .modal-close-icon {
   fill: rgba(var(--navy-blue-cl));
