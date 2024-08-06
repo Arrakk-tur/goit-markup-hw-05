@@ -20,6 +20,10 @@
   --col-indent: 24px;
   --row-indent: var(--col-indent);
 
+  /* Animation */
+  --anim-duration: 250ms;
+  --anim-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -510,7 +514,7 @@ footer {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
-.modal-close-btn {
+/* .modal-close-btn {
   position: absolute;
   display: flex;
   align-items: center;
@@ -525,29 +529,64 @@ footer {
   background-color: rgba(var(--cornflower-cl));
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: var(--cornflower-cl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition-duration: var(--anim-duration);
+  transition-timing-function: var(--anim-timing-function);
+  transition-property: background-color, border;
+}
+.modal-close-icon {
+  fill: var(--navy-blue);
+  transition-duration: var(--anim-duration);
+  transition-timing-function: var(--anim-timing-function);
+  transition-property: fill;
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  border: none;
+  background-color: var(--ocean-cl);
+}
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--white-cl);
+}
+
+/* .modal-close-btn:hover,
+.modal-close-btn:focus {
   /* background-color: rgba(var(--ocean-cl)); */
-  background-color: rgba(var(--accent-cl));
+/* background-color: rgba(var(--accent-cl));
   border: none;
   fill: rgba(var(--white-cl));
-}
-.modal-close-icon {
-  fill: rgba(var(--navy-blue-cl));
-  transition: fill var(--anim-fast);
-}
+} */
+/* .modal-close-icon { */
+fill: rgba(var(--navy-blue-cl));
+transition: fill var(--anim-fast);
+/* } */
 /* .modal-close-btn:focus {
   background-color: rgba(var(--ocean-cl));
   background-color: #404bbf;
   border: none;
 } */
-.modal-close-icon:hover {
+/* .modal-close-icon:hover {
   fill: #ffffff;
 }
 .modal-close-icon:focus {
   fill: #ffffff;
-}
+} */
 .modal-caption {
   max-width: 298px;
   margin-bottom: 16px;
